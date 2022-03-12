@@ -1,0 +1,30 @@
+<%- include("partials/header"); -%>
+
+<h1>Home</h1>
+
+<% articlesList.forEach(function(article){ %>
+
+    <% const length = 100; %>
+    <% const articleToShorten = article.articleContent; %>
+    <% const TruncatedArticle = articleToShorten.substring(0,length); %>
+
+
+    <h2><%= article.articleTitle %> - (<%= article.articleDate %>)</h2>
+    <!-- <p><%= article.articleContent %></p> -->
+    <p><%= TruncatedArticle %>... <a href="/articles/<%= article.articleTitle %>">Read more</a></p>
+
+<% }); %>
+
+
+<!-- articleDate: req.body.articleDate,
+articleTitle: req.body.articleTitle,
+articleContent: req.body.articleContent,
+articleGpsDataPoi1: req.body.gpsDataPoi1,
+articleTimeOfPoi1: req.body.timeOfPoi1,
+articleNameOfPoi1: req.body.nameOfPoi1,
+articleGpsDataPoi2: req.body.gpsDataPoi2,
+articleTimeOfPoi2: req.body.timeOfPoi2,
+articleNameOfPoi2: req.body.nameOfPoi2 -->
+
+
+<%- include("partials/footer"); -%>

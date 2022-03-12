@@ -1,0 +1,30 @@
+
+TO DO:
+
+. TO DO - Add some functionalities:
+.. Possibility to modify an Article
+.. Possibility to delete an Article
+.. Add possibility to sign in / Authenticate
+
+
+. TO DO - Other:
+.. Clean code / refactor and and comment
+.. Push to GitHub
+.. Push to Heroku
+.. Put the link on Portfolio with a brief description
+
+
+TECHNOS AND MODULES USED:
+. HTML
+. CSS
+. Bootstrap
+. JavaScript
+. Express
+. Body parser
+. Lodash
+
+
+POSSIBLE FURTHER IMPLEMENTATION:
+. Link to MongoDB database
+
+

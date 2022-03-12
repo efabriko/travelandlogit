@@ -1,0 +1,18 @@
+{
+  "name": "travelandlogit",
+  "version": "1.0.0",
+  "description": "A personnal travel journal that allows to log daily travel activities as well as GPS points of interest.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Xavier4eFabriko",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.15"
+  }
+}

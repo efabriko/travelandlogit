@@ -1,0 +1,34 @@
+<%- include("partials/header"); -%>
+
+<h1>Article</h1>
+
+<h2><%= article.articleTitle %> - (<%= article.articleDate %>)</h2>
+<p><%= article.articleContent %></p>
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">POI Name</th>
+        <th scope="col">GPS data (lat., long.)</th>
+        <th scope="col">Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td><%= article.articleNameOfPoi1 %></td>
+        <td><%= article.articleGpsDataPoi1 %></td>
+        <td><%= article.articleTimeOfPoi1 %></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td><%= article.articleNameOfPoi2 %></td>
+        <td><%= article.articleGpsDataPoi2 %></td>
+        <td><%= article.articleTimeOfPoi2 %></td>
+      </tr>
+    </tbody>
+  </table>
+
+<%- include("partials/footer"); -%>
