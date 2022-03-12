@@ -1,7 +1,7 @@
 {
   "name": "travelandlogit",
   "version": "1.0.0",
-  "description": "A personnal travel journal that allows to log daily travel activities as well as GPS points of interest.",
+  "description": "A personal travel journal that allows to log daily travel activities as well as GPS points of interest.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
