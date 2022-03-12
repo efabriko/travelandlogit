@@ -80,11 +80,51 @@ app.post("/compose", function(req, res){
 });
 
 
+// Route to DELETE an item (using a POST HTTP Method... Maybe should use Delete HTTP Method instead...)
+app.post("/article/delete", function(req, res){
+  // We get the title of the article User wants to delete
+  const deletedArticleTitle = req.body.deletedArticle;
+  console.log("Article will be deleted:" + deletedArticleTitle);
+
+  // We convert it to lower case
+  const requestedArticleTitleToRemove = _.lowerCase(deletedArticleTitle);
+  console.log("Title of article to be deleted: " + requestedArticleTitleToRemove)
+
+  // We convert the requestedArticleTitleToRemove to each of the article Titles in the article Array
+
+  var i = 0;
+  articlesList.forEach(function(article) {
+
+    // console.log(article.articleTitle);
+    // console.log(_.lowerCase(article.articleTitle));
+
+    // We convert stored article to lower case
+    const storedArticle = _.lowerCase(article.articleTitle);
+
+    console.log(storedArticle);
+
+    if (storedArticle === requestedArticleTitleToRemove) {
+      console.log("Match found!");
+      console.log("This article will be removed from the List of Articles: " + article.articleTitle + " position: "+ i);
+      // If there is a Match, we console log the corresponding article in order to check
+      console.log("Article to be deleted: " + JSON.stringify(articlesList[i]));
+      // Then we remove this Article Object from our articlesList
+      const reducedArticlesList = articlesList.splice(i, 1);
+      console.log(reducedArticlesList);
+      } else {
+        console.log("No match found!");
+      };
+      i++;
+
+  });
+  res.redirect("/");
+});
+
+
 // Thanks to express Route parameters functionalty, we create a route that allows to access parameters the User input inside the URL
 // Express will create a JS Object from the parameter(s) the User will enter in the URL
-
 app.get("/articles/:articleName", function(req, res){
-  // console.log(req.params.articleName)
+  console.log("The Parameters received from the url are: " + req.params.articleName);
 
   articlesList.forEach(function(article) {
     console.log(article.articleTitle);

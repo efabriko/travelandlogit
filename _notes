@@ -3,13 +3,13 @@ TO DO:
 
 . TO DO - Add some functionalities:
 .. Possibility to modify an Article
-.. Possibility to delete an Article
+.. [DONE - 20220312] - Possibility to delete an Article (cf. below) => Done using POST HTTP Method... maybe should refactor using DELETE HTTP Method instead ?
 .. Add possibility to sign in / Authenticate
 
 
 . TO DO - Other:
 .. Clean code / refactor and and comment
-.. Push to GitHub
+.. [DONE - 20220312] - Push to GitHub
 .. Push to Heroku
 .. Put the link on Portfolio with a brief description
 
@@ -28,3 +28,14 @@ POSSIBLE FURTHER IMPLEMENTATION:
 . Link to MongoDB database
 
 
+
+-----
+DELETE ARTICLE IMPLEMENTATION:
+-----
+
+. Check resources: https://love2dev.com/blog/javascript-remove-from-array/
+
+. Steps:
+.. Step 1 - Create a delete route in app.js
+.. Step 2 - Add a button in the article.ejs that will allow to delete a certain article in the list
+.. Step 3 - Commit to Git
